@@ -12,11 +12,5 @@ class FullHistoryContext(ContextManager):
 
         if len(history) < 2 or history[-1].role != "user":
             raise ValueError("Context must be built immediately after a user message.")
-
-        selected = history
-
-        # raise NotImplementedError("Implement full-history policy.")
         
-        return Context(
-            messages=selected,
-        )
+        return Context(messages=history)
