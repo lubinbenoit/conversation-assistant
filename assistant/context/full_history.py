@@ -8,4 +8,15 @@ class FullHistoryContext(ContextManager):
     name = "full_history"
 
     def build(self, conversation: Conversation) -> Context:
-        raise NotImplementedError("Implement full-history policy.")
+        history = conversation.messages
+
+        if len(history) < 2 or history[-1].role != "user":
+            raise ValueError("Context must be built immediately after a user message.")
+
+        selected = history
+
+        # raise NotImplementedError("Implement full-history policy.")
+        
+        return Context(
+            messages=selected,
+        )
