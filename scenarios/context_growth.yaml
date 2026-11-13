@@ -1,0 +1,13 @@
+name: context_growth
+description: Observe real Ollama prompt usage as full history grows.
+turns:
+  - I am revising neural networks. Assume I know calculus and linear algebra, but I have not studied probability yet. Acknowledge this in one sentence.
+  - In at most two sentences, why do multilayer neural networks need nonlinear activation functions?
+  - In at most two sentences, compare sigmoid and tanh as activation functions.
+  - In at most two sentences, explain ReLU and give one practical reason it became popular.
+  - In at most two sentences, what is the dying ReLU problem?
+  - In at most two sentences, explain leaky ReLU and how it changes the negative half of the function.
+  - In at most two sentences, what output activation would you use for binary classification?
+  - In at most two sentences, explain the corresponding loss function without assuming I know probability.
+  - In at most two sentences, how does that loss interact with gradient descent during training?
+  - In at most two sentences, what does the learning rate control during gradient descent?

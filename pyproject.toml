@@ -1,0 +1,23 @@
+[project]
+name = "conversation-assistant"
+version = "1.0.0"
+description = "Mini-project on conversational assistants"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pylatexenc>=3.0b2,<4",
+    "PyYAML>=6.0",
+    "textual>=6.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

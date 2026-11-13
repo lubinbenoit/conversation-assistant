@@ -1,0 +1,12 @@
+name: state_invalidation
+description: A retained instruction is explicitly cancelled and must no longer affect later responses after both messages leave the recent-turn window.
+turns:
+  - When I ask about an exercise, give me hints only and do not provide the final answer.
+  - Briefly explain what a derivative represents.
+  - What is the chain rule?
+  - Cancel my earlier exercise instruction. From now on, you may give complete solutions to exercises.
+  - What is a partial derivative?
+  - Explain the difference between a derivative and a gradient.
+  - What does the gradient of a loss function represent?
+  - Why is the chain rule important in backpropagation?
+  - "Exercise: let f(x) = x^2 + 3x. Find f'(2)."

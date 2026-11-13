@@ -1,0 +1,13 @@
+name: persistent_constraint
+description: An early constraint should fall outside a three-turn recency window.
+turns:
+  - When I ask about an exercise, do not give me the complete solution. Give me hints that let me finish it myself.
+  - I am reviewing backpropagation. Start by reminding me what the chain rule says.
+  - Use a scalar example with three composed functions.
+  - Now relate that example to a single neuron with a sigmoid activation.
+  - Explain where the derivative of the activation enters the calculation.
+  - What changes when a layer contains many neurons rather than one?
+  - Explain the role of the Jacobian without going deeply into matrix calculus.
+  - Give me a compact recap of the notation we have used so far.
+  - Suppose the network has two hidden layers. Describe the direction in which gradients are propagated.
+  - "Exercise: let y = (wx + b)^2 with x = 3, w = 2, and b = 1. Find dy/dw."

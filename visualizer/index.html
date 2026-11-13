@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Evaluation Run Viewer</title>
+  <script>
+    try {
+      const savedTheme = localStorage.getItem("evaluation-viewer-theme");
+      document.documentElement.dataset.theme = savedTheme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    } catch (_) {
+      document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+  </script>
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>Evaluation Run Viewer</h1>
+    </div>
+    <div class="header-actions">
+      <button id="theme-button" class="button button-secondary" type="button" aria-pressed="false">Dark mode</button>
+      <button id="raw-run-button" class="button button-secondary" type="button" disabled>View raw JSON</button>
+      <button id="open-button" class="button button-primary" type="button">Open log files</button>
+      <input id="file-input" type="file" accept=".json,application/json" multiple hidden>
+    </div>
+  </header>
+
+  <main id="app" class="app-shell">
+    <aside class="run-sidebar" aria-label="Loaded evaluation runs">
+      <div class="sidebar-heading">
+        <h2>Loaded files</h2>
+        <span id="run-count" class="count-badge">0</span>
+      </div>
+      <div id="run-list" class="run-list"></div>
+    </aside>
+
+    <section class="workspace">
+      <div id="drop-zone" class="drop-zone">
+        <div class="drop-icon" aria-hidden="true">↓</div>
+        <button id="empty-open-button" class="button button-primary" type="button">Choose log files</button>
+      </div>
+
+      <div id="run-view" class="run-view" hidden>
+        <section class="run-header" aria-label="Run metadata">
+          <dl id="run-metadata" class="metadata-grid"></dl>
+        </section>
+
+        <section class="turn-panel" aria-labelledby="timeline-title">
+          <div class="timeline-section">
+            <div class="section-heading">
+              <h2 id="timeline-title" class="eyebrow section-label">Conversation turns</h2>
+              <div class="legend"><span class="legend-swatch"></span> Prompt utilization</div>
+            </div>
+            <div id="turn-timeline" class="turn-timeline"></div>
+          </div>
+
+          <div id="turn-tabs" class="tabs" role="tablist" aria-label="Turn details">
+            <button class="tab is-active" id="tab-exchange" data-tab="exchange" role="tab" aria-selected="true" aria-controls="panel-exchange">Exchange</button>
+            <button class="tab" id="tab-input" data-tab="input" role="tab" aria-selected="false" aria-controls="panel-input">Model input</button>
+            <button class="tab" id="tab-usage" data-tab="usage" role="tab" aria-selected="false" aria-controls="panel-usage">Usage</button>
+            <button class="tab" id="tab-state" data-tab="state" role="tab" aria-selected="false" aria-controls="panel-state">Policy state</button>
+          </div>
+
+          <div id="panel-exchange" class="tab-panel" role="tabpanel" aria-labelledby="tab-exchange"></div>
+          <div id="panel-input" class="tab-panel" role="tabpanel" aria-labelledby="tab-input" hidden></div>
+          <div id="panel-usage" class="tab-panel" role="tabpanel" aria-labelledby="tab-usage" hidden></div>
+          <div id="panel-state" class="tab-panel" role="tabpanel" aria-labelledby="tab-state" hidden></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+  <dialog id="raw-dialog" class="raw-dialog">
+    <div class="dialog-header">
+      <div>
+        <p class="eyebrow">Source data</p>
+        <h2 id="raw-dialog-title">Raw JSON</h2>
+      </div>
+      <button id="close-raw-button" class="icon-button" type="button" aria-label="Close raw JSON">×</button>
+    </div>
+    <pre id="raw-json"></pre>
+  </dialog>
+
+  <script src="vendor/marked/marked.umd.js"></script>
+  <script src="vendor/katex/katex.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

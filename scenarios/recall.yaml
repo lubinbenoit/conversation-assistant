@@ -1,0 +1,6 @@
+name: recall
+description: Distinguishes stateless requests from history replay.
+turns:
+  - For this conversation, use E to denote the loss function instead of L.
+  - In one sentence, what does gradient descent do?
+  - What symbol did I ask you to use for the loss function?

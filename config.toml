@@ -1,0 +1,19 @@
+[model]
+name = "gemma4:e4b"
+host = "http://localhost:11434"
+num_ctx = 4096
+num_predict = 500
+temperature = 0.2
+seed = 42
+think = "off"
+timeout_seconds = 300
+
+[assistant]
+system_prompt = """You are a study assistant for a university course on machine learning. Answer the user's question directly. Respect preferences and constraints established earlier in the current conversation when they remain applicable."""
+
+[context]
+policy = "stateless"
+recent_turns = 3
+
+[trace]
+directory = "logs"

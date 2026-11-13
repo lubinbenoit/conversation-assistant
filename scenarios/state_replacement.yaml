@@ -1,0 +1,12 @@
+name: state_replacement
+description: An old retained preference is replaced with a newer one after both instructions leave the recent-turn window.
+turns:
+  - When I ask for a study recap, end your response with the marker [BLUE].
+  - Briefly explain the difference between training loss and validation loss.
+  - What does overfitting mean?
+  - Change my recap preference. From now on, do not use [BLUE]. End study recaps with the marker [GREEN] instead.
+  - Explain why regularization can reduce overfitting.
+  - What is the role of a validation set?
+  - In one sentence, explain early stopping.
+  - What is weight decay?
+  - Give me a short study recap of what we have discussed.
