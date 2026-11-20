@@ -4,7 +4,7 @@ __pycache__/
 .pytest_cache/
 *.pyc
 .env
-logs/
-!logs/.gitkeep
+# logs/
+# !logs/.gitkeep
 dist/
 .config.toml

@@ -1,0 +1,118 @@
+{
+  "scenario": "recall",
+  "policy": "stateless",
+  "model": "gemma4:e4b",
+  "num_ctx": 4096,
+  "recent_turns": 3,
+  "num_predict": 500,
+  "temperature": 0.2,
+  "seed": 42,
+  "thinking_mode": "off",
+  "records": [
+    {
+      "turn": 1,
+      "user": "For this conversation, use E to denote the loss function instead of L.",
+      "assistant": "Understood. I will use **E** to denote the loss function for the remainder of this conversation. How can I help you with your machine learning studies?",
+      "num_ctx": 4096,
+      "prompt_eval_count": 65,
+      "eval_count": 33,
+      "prompt_utilization": 0.015869140625,
+      "done_reason": "stop",
+      "source_ids": [
+        0,
+        1
+      ],
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a study assistant for a university course on machine learning. Answer the user's question directly. Respect preferences and constraints established earlier in the current conversation when they remain applicable."
+        },
+        {
+          "role": "user",
+          "content": "For this conversation, use E to denote the loss function instead of L."
+        }
+      ],
+      "manager_state_before": {},
+      "manager_state_after": {},
+      "maintenance_error": null,
+      "maintenance_calls": {
+        "call_count": 0,
+        "successful_call_count": 0,
+        "failed_call_count": 0,
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "calls": []
+      }
+    },
+    {
+      "turn": 2,
+      "user": "In one sentence, what does gradient descent do?",
+      "assistant": "Gradient descent is an iterative optimization algorithm that finds the minimum of a function by repeatedly taking steps proportional to the negative of the gradient at the current point.",
+      "num_ctx": 4096,
+      "prompt_eval_count": 60,
+      "eval_count": 31,
+      "prompt_utilization": 0.0146484375,
+      "done_reason": "stop",
+      "source_ids": [
+        0,
+        3
+      ],
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a study assistant for a university course on machine learning. Answer the user's question directly. Respect preferences and constraints established earlier in the current conversation when they remain applicable."
+        },
+        {
+          "role": "user",
+          "content": "In one sentence, what does gradient descent do?"
+        }
+      ],
+      "manager_state_before": {},
+      "manager_state_after": {},
+      "maintenance_error": null,
+      "maintenance_calls": {
+        "call_count": 0,
+        "successful_call_count": 0,
+        "failed_call_count": 0,
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "calls": []
+      }
+    },
+    {
+      "turn": 3,
+      "user": "What symbol did I ask you to use for the loss function?",
+      "assistant": "I do not have a record of you specifying a particular symbol for the loss function in our current conversation. Could you please remind me what symbol you would like me to use?",
+      "num_ctx": 4096,
+      "prompt_eval_count": 63,
+      "eval_count": 36,
+      "prompt_utilization": 0.015380859375,
+      "done_reason": "stop",
+      "source_ids": [
+        0,
+        5
+      ],
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a study assistant for a university course on machine learning. Answer the user's question directly. Respect preferences and constraints established earlier in the current conversation when they remain applicable."
+        },
+        {
+          "role": "user",
+          "content": "What symbol did I ask you to use for the loss function?"
+        }
+      ],
+      "manager_state_before": {},
+      "manager_state_after": {},
+      "maintenance_error": null,
+      "maintenance_calls": {
+        "call_count": 0,
+        "successful_call_count": 0,
+        "failed_call_count": 0,
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "calls": []
+      }
+    }
+  ]
+}

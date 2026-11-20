@@ -1,0 +1,11 @@
+name: my_invalidation
+description: Paraphrased withdrawal of a constraint.
+turns:
+  - Please never give me full solutions to exercises, only guidance.
+  - What is a gradient?
+  - What is a learning rate?
+  - Forget what I said about exercises, full solutions are fine now.
+  - What is momentum?
+  - What is a minibatch?
+  - What is an epoch?
+  - "Exercise: let g(x) = 3x^2 - x. Find g'(1)."
