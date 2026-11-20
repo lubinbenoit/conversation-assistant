@@ -1,0 +1,14 @@
+name: eval_fact_recall
+description: >
+  Expected failure of the managed policy. The user gives facts about their own project (not an
+  instruction) that are needed six turns later. Evidence: the managed state stays empty by design,
+  so the facts are absent from the turn-7 context. Expected: full_history answers 31 parameters
+  (30 weights + 1 bias); recent_window and managed cannot know the number of features.
+turns:
+  - Some context about my project. My dataset has 1200 examples and 30 input features, and I am training a linear regression model on it.
+  - In at most three sentences, what is the difference between a feature and a label?
+  - In at most three sentences, why do we split data into training and test sets?
+  - In at most three sentences, what is mean squared error?
+  - In at most three sentences, what is feature scaling?
+  - In at most three sentences, what is regularization?
+  - How many trainable parameters does my model have, including the bias?

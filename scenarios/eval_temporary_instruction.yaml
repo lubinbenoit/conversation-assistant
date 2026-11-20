@@ -1,0 +1,13 @@
+name: eval_temporary_instruction
+description: >
+  A one-off instruction applies to a single answer and must stop influencing the conversation once
+  it has been served. Evidence: the managed state stays empty at every turn; answers from turn 2 on
+  are in English. Expected: full_history and recent_window may keep imitating French while turn 1 is
+  replayed; managed should never store the instruction.
+turns:
+  - For your next answer only, reply in French. In at most three sentences, what is a neural network?
+  - In at most three sentences, what is an activation function?
+  - In at most three sentences, what is a hidden layer?
+  - In at most three sentences, what is a weight in a neural network?
+  - In at most three sentences, what is a bias term?
+  - In at most three sentences, what is a forward pass?

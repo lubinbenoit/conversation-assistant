@@ -1,0 +1,14 @@
+name: eval_persistence_multi
+description: >
+  Two independent durable instructions (a notation convention and an output format) are set in
+  turns 1-2 and must both survive after leaving the 3-turn window. Evidence: at turn 7, the managed
+  state holds two separate keys, both are injected in the system message, and the answer uses eta
+  and ends with a TL;DR line. Expected: full_history and managed keep both; recent_window loses both.
+turns:
+  - For the rest of this conversation, write the learning rate as η and never as α.
+  - Also, end every answer with a single final line that starts with "TL;DR:".
+  - In at most three sentences, what is a loss function?
+  - In at most three sentences, what is a minibatch?
+  - In at most three sentences, what is an epoch?
+  - In at most three sentences, what is overfitting?
+  - Write the gradient descent update rule and explain each symbol in at most three sentences.

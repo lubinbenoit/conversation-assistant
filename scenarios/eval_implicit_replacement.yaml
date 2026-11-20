@@ -1,0 +1,15 @@
+name: eval_implicit_replacement
+description: >
+  A preference is replaced without explicit cue words such as "change", "instead" or "from now on".
+  Both the original (turn 1) and the replacement (turn 3) leave the window before the test at turn 7.
+  Evidence: at turn 3 the managed policy applies a replace on the same key (not an add of a second
+  key); at turn 7 only the Python preference is in context. Expected: full_history and managed use
+  Python; recent_window has no preference left.
+turns:
+  - When you give examples, write them as mathematical formulas rather than code.
+  - In at most three sentences, give an example of a cost function.
+  - Honestly, reading Python helps me much more, so that is what I would like to see in examples from here on.
+  - In at most three sentences, what does a derivative tell us?
+  - In at most three sentences, what is a learning rate?
+  - In at most three sentences, what is a local minimum?
+  - Give one short example of computing a mean squared error.

@@ -1,0 +1,16 @@
+name: eval_permission_conflict
+description: >
+  Design limitation of the managed policy. A constraint is withdrawn by granting permission
+  ("full solutions are okay again"); the policy may encode this as an obligation ("Provide full
+  solutions") instead of removing the key. The final request explicitly asks for a hint only.
+  Evidence: the operation applied at turn 3 (remove vs replace), the stored value, and whether the
+  turn-7 answer follows the current request or the stored instruction. Expected: full_history and
+  recent_window give a hint; managed is at risk of giving the full answer h'(2) = 60.
+turns:
+  - When I ask about an exercise, give me hints only, not the full solution.
+  - In at most three sentences, what is the power rule for derivatives?
+  - You can drop that rule about exercises, full solutions are okay again.
+  - In at most three sentences, what is the product rule?
+  - In at most three sentences, what is the quotient rule?
+  - In at most three sentences, what is a second derivative?
+  - "Exercise: let h(x) = 5x^3. Find h'(2). This time I only want a hint for the first step, not the answer."

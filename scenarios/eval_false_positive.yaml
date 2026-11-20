@@ -1,0 +1,13 @@
+name: eval_false_positive
+description: >
+  A sentence that looks like a preference but describes a third party and is explicitly rejected by
+  the user. Evidence: the managed state stays empty after turn 1 and the final answer is not forced
+  into Python code. Expected: no policy should impose code examples; a managed policy that stores
+  the sentence would wrongly carry it forward after it leaves the window.
+turns:
+  - My study partner always asks for Python code examples, but that is not something I need.
+  - In at most three sentences, what is a gradient?
+  - In at most three sentences, what is a learning rate?
+  - In at most three sentences, what is a convex function?
+  - In at most three sentences, what is a saddle point?
+  - Give me a short example of how the learning rate affects one gradient descent step.
